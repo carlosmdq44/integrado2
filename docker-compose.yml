@@ -22,6 +22,8 @@ services:
       - ./app/dbt_integrado2:/app/dbt_integrado2
     depends_on:
       - postgres
+    ports:
+      - "8501:8501"
     environment:
       DBT_PROFILES_DIR: /app/dbt_integrado2
     command: >
