@@ -1,31 +1,84 @@
 # Proyecto Integrador 2 – Data Engineering
 
-Este repositorio contiene el desarrollo de un proyecto integrador de Data Engineering
-orientado a un e‑commerce. El trabajo se divide en cuatro avances que construyen un
-pipeline completo, desde la carga de datos hasta la visualización en un dashboard.
+Este repositorio contiene el desarrollo de un proyecto integrador del bootcamp de Data Engineering, enfocado en la construcción de un pipeline completo de datos para un e‑commerce, desde la ingesta hasta la visualización final.
 
-## Avances
+---
 
-1. **Avance 1 – Ingesta Inicial**  
-   - Configuración de `docker-compose` y base de datos PostgreSQL.  
-   - Creación de tablas *raw* y carga de archivos CSV.
+## 🧩 Avances del Proyecto
 
-2. **Avance 2 – Limpieza y Staging**  
-   - Scripts en Python para limpiar e importar los CSV.  
-   - Primeros modelos en DBT para las tablas de staging.
+### 🔹 Avance 1 – Ingesta Inicial
+- Configuración de `docker-compose` con PostgreSQL.
+- Creación de tablas `raw` a partir de archivos CSV.
 
-3. **Avance 3 – Modelado Dimensional**  
-   - Uso de macros para SCD Type 2 e implementación de modelos `intermediate` y `marts`.  
-   - Tests de calidad de datos en DBT.
+### 🔹 Avance 2 – Limpieza y Staging
+- Scripts en Python para limpiar e importar los CSV.
+- Modelos en DBT para construir las tablas de `staging`.
 
-4. **Avance 4 – Visualización**  
-   - Construcción de un dashboard interactivo con Streamlit.  
-   - Gráficos de ingresos por fecha y ventas por categoría.
+### 🔹 Avance 3 – Modelado Dimensional
+- Implementación del modelo en estrella.
+- Uso de macros para Slowly Changing Dimensions (SCD) tipo 2.
+- Creación de modelos `intermediate` y `marts`.
+- Pruebas de calidad de datos con `dbt test`.
 
-## Uso
+### 🔹 Avance 4 – Visualización
+- Construcción de un dashboard interactivo con Streamlit.
+- Gráficos de ingresos por fecha y ventas por categoría.
 
-1. Copiar `.env.example` a `.env` y completar las variables.
-2. Levantar los servicios:
+---
 
-   ```bash
-   docker compose --env-file .env up --build
+## ⚙️ Cómo usar
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/carlosmdq44/integrado2.git
+cd integrado2
+Copiar el archivo de entorno:
+
+bash
+Copiar
+Editar
+cp .env.example .env
+# Editar y completar variables como POSTGRES_DB, POSTGRES_USER, etc.
+Levantar los servicios:
+
+bash
+Copiar
+Editar
+docker compose --env-file .env up --build
+Una vez iniciado, accedé al dashboard en http://localhost:8501
+
+📁 Estructura del proyecto
+bash
+Copiar
+Editar
+├── app/
+│   ├── dbt_integrado2/         # Proyecto DBT (modelos, profiles.yml)
+│   ├── sql/                    # Scripts de creación de tablas RAW
+│   ├── main.py                 # App de Streamlit
+│   └── requirements.txt        # Librerías de Python
+├── .env.example
+├── docker-compose.yml
+├── README.md
+└── Dockerfile
+🧪 Validaciones
+dbt debug para verificar conexión y configuración
+
+dbt run para construir los modelos
+
+dbt test para pruebas de calidad de datos
+
+🛠️ Tecnologías utilizadas
+PostgreSQL
+
+Docker & Docker Compose
+
+Python + Pandas + SQLAlchemy
+
+DBT (Data Build Tool)
+
+Streamlit
+
+GitHub
+
+🙌 Autor
+Desarrollado por Carlos Figueroa como parte del Proyecto Integrador 2 del bootcamp Soy Henry.
