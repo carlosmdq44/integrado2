@@ -1,4 +1,4 @@
-UsuarioID,Calle,Ciudad,Departamento,Provincia,Distrito,Estado,CodigoPostal,Pais
+usuarioid,calle,ciudad,departamento,provincia,distrito,estado,codigopostal,pais
 1,Diagonal Chilecito N° 335,Comodoro Rivadavia,Mendoza,Mendoza,Recoleta,Mendoza,10044733,Argentina
 2,Diagonal Río Negro N° 497,Rawson,Tierra del Fuego,Tierra del Fuego,Palermo,Tierra del Fuego,76007280,Argentina
 3,Blv. Formosa N° 118,Mar del Plata,Salta,Salta,Barracas,Salta,53604249,Argentina

@@ -1,4 +1,4 @@
-Nombre,Descripcion,Precio,Stock,CategoriaID
+nombre,descripcion,precio,stock,categoriaid
 Smartphone Galaxy A54,Teléfono inteligente con pantalla AMOLED y cámara triple.,349.99,50,1
 Laptop Dell Inspiron 15,Laptop para trabajo y estudio con procesador Intel i5.,799.0,30,1
 Auriculares Bluetooth Sony,Auriculares inalámbricos con cancelación de ruido.,129.99,100,1

@@ -1,4 +1,4 @@
-UsuarioID,FechaOrden,Total,Estado
+usuarioid,fechaorden,total,estado
 153,2024-09-09 09:10:27,393.81,Enviado
 810,2024-09-29 09:10:27,918.85,Completado
 404,2024-11-03 09:10:27,391.29,Pendiente

@@ -1,4 +1,4 @@
-OrdenID,ProductoID,Cantidad,PrecioUnitario
+ordenid,productoid,cantidad,preciounitario
 833,33,1,425.26
 657,21,4,307.13
 911,15,4,444.75
