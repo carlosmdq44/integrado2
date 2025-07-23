@@ -1,0 +1,17 @@
+name: "dbt_integrado2"
+version: "1.0"
+profile: "integrador2"
+config-version: 2
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+models:
+  dbt_integrado2:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: table
+    marts:
+      +materialized: table

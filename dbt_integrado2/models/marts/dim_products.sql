@@ -1,0 +1,1 @@
+{{ sce_dimension('stg_products', 'product_id') }}

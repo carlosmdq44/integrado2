@@ -1,0 +1,10 @@
+/* Tema sencillo para Streamlit */
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #005b96;
+}
