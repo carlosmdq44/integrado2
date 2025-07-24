@@ -13,5 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar el resto de la aplicación
 COPY . .
 
+# ✅ Agregá esta línea justo acá, después de copiar el proyecto
+RUN dbt deps
+
 # Comando por defecto al iniciar el contenedor
 CMD ["streamlit", "run", "main.py"]

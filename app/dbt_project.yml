@@ -3,9 +3,9 @@ version: "1.0"
 profile: "integrador2"
 config-version: 2
 
-model-paths: ["models"]
+model-paths: ["dbt_integrado2/models"]
 macro-paths: ["macros"]
-test-paths: ["tests"]
+test-paths: ["dbt_integrado2/tests"]
 
 models:
   dbt_integrado2:
