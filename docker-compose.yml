@@ -1,6 +1,9 @@
+version: "3.8"
+
 services:
   postgres:
     image: postgres:13
+    container_name: postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -10,6 +13,11 @@ services:
     volumes:
       - ./app/ddl:/docker-entrypoint-initdb.d
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
   app:
     build:
@@ -21,7 +29,8 @@ services:
       - ./app:/app
       - ./app/dbt_integrado2:/app/dbt_integrado2
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     ports:
       - "8501:8501"
     environment:
@@ -34,8 +43,11 @@ services:
     command: >
       bash -c "
       dbt debug &&
-      dbt run &&
-      streamlit run main.py"
+      dbt deps &&
+      dbt run ||
+      true &&
+      streamlit run main.py --server.port 8501 --server.address 0.0.0.0
+      "
 
 volumes:
   pgdata:

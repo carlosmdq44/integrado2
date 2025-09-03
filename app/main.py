@@ -15,24 +15,28 @@ def get_engine():
     port = os.getenv("POSTGRES_PORT", 5432)
     return create_engine(f"postgresql://{user}:{pwd}@{host}:{port}/{db}")
 
-@st.cache_data
+@st.cache_data(show_spinner=False)
 def cargar_datos():
     engine = get_engine()
     query = """
-        select order_date, total_price, category_name
-        from fact_sales
-        join dim_products using(product_id)
-        join stg_categories using(category_id)
+        SELECT o.order_date, oi.total_price, c.category_name
+        FROM fact_sales oi
+        JOIN dim_products p ON oi.product_id = p.product_id
+        JOIN stg_categories c ON p.category_id = c.category_id
+        JOIN raw.orders o ON oi.order_id = o.order_id
     """
     return pd.read_sql(query, engine)
 
-df = cargar_datos()
+try:
+    df = cargar_datos()
+    st.subheader("Ingresos por fecha")
+    ingresos = df.groupby("order_date")["total_price"].sum().reset_index()
+    st.line_chart(ingresos, x="order_date", y="total_price")
 
-st.subheader("Ingresos por fecha")
-ingresos = df.groupby("order_date")["total_price"].sum().reset_index()
-st.line_chart(ingresos, x="order_date", y="total_price")
-
-st.subheader("Ventas por categoría")
-ventas = df.groupby("category_name")["total_price"].sum().reset_index()
-fig = px.bar(ventas, x="category_name", y="total_price", title="Ingresos por categoría")
-st.plotly_chart(fig, use_container_width=True)
+    st.subheader("Ventas por categoría")
+    ventas = df.groupby("category_name")["total_price"].sum().reset_index()
+    fig = px.bar(ventas, x="category_name", y="total_price", title="Ingresos por categoría")
+    st.plotly_chart(fig, use_container_width=True)
+except Exception as e:
+    st.error(f"No pude cargar datos aún. ¿Se crearon las tablas/vistas? Detalle: {e}")
+    st.stop()

@@ -1,20 +1,18 @@
 FROM python:3.11-slim
 
-# Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Instalar git (y limpiar caché de apt para imagen más liviana)
-RUN apt-get update && apt-get install -y git && apt-get clean && rm -rf /var/lib/apt/lists/*
+# git por si dbt necesita bajar paquetes, y limpiar apt
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copiar los requirements y luego instalar dependencias
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar el resto de la aplicación
 COPY . .
 
-# ✅ Agregá esta línea justo acá, después de copiar el proyecto
-RUN dbt deps
+# Descargar dependencias de dbt si existen
+RUN dbt deps || true
 
-# Comando por defecto al iniciar el contenedor
-CMD ["streamlit", "run", "main.py"]
+CMD ["streamlit", "run", "main.py", "--server.port", "8501", "--server.address", "0.0.0.0"]

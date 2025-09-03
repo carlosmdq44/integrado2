@@ -1,0 +1,13 @@
+name: "dbt_integrado2"
+version: "1.0.0"
+config-version: 2
+
+profile: "integrador2"
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  dbt_integrado2:
+    +materialized: view
