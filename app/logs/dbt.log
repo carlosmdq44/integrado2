@@ -3805,3 +3805,765 @@ KeyError: 'dbt_integrado2://macros/sce_macros.sql'
 [0m20:59:13.275929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729cfaa584d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729cfac0c950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729cf91be7d0>]}
 [0m20:59:13.276791 [debug] [MainThread]: Flushing usage events
 [0m20:59:13.970801 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:35:19.542319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f993b169150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f993b42d290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f993b1686d0>]}
+
+
+============================== 12:35:19.553713 | 6e8409a3-bc33-460b-8c8e-bc588fdc82eb ==============================
+[0m12:35:19.553713 [info ] [MainThread]: Running with dbt=1.10.10
+[0m12:35:19.554977 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'no_print': 'None', 'warn_error': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'log_path': '/app/logs', 'indirect_selection': 'eager', 'printer_width': '80', 'use_colors': 'True', 'target_path': 'None', 'empty': 'None', 'debug': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'write_json': 'True', 'profiles_dir': '/app/dbt_integrado2', 'version_check': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:35:19.570668 [info ] [MainThread]: dbt version: 1.10.10
+[0m12:35:19.571601 [info ] [MainThread]: python version: 3.11.13
+[0m12:35:19.572429 [info ] [MainThread]: python path: /usr/local/bin/python3.11
+[0m12:35:19.573222 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41
+[0m12:35:19.646027 [info ] [MainThread]: Using profiles dir at /app/dbt_integrado2
+[0m12:35:19.647431 [info ] [MainThread]: Using profiles.yml file at /app/dbt_integrado2/profiles.yml
+[0m12:35:19.648251 [info ] [MainThread]: Using dbt_project.yml file at /app/dbt_project.yml
+[0m12:35:19.649245 [info ] [MainThread]: adapter type: postgres
+[0m12:35:19.650086 [info ] [MainThread]: adapter version: 1.9.0
+[0m12:35:19.771862 [info ] [MainThread]: Configuration:
+[0m12:35:19.773220 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:35:19.774018 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m12:35:19.774760 [info ] [MainThread]: Required dependencies:
+[0m12:35:19.775724 [debug] [MainThread]: Executing "git --help"
+[0m12:35:19.786110 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:35:19.787410 [debug] [MainThread]: STDERR: "b''"
+[0m12:35:19.788313 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:35:19.789400 [info ] [MainThread]: Connection:
+[0m12:35:19.790425 [info ] [MainThread]:   host: postgres
+[0m12:35:19.791378 [info ] [MainThread]:   port: 5432
+[0m12:35:19.792388 [info ] [MainThread]:   user: postgres
+[0m12:35:19.793474 [info ] [MainThread]:   database: ecommerce
+[0m12:35:19.794505 [info ] [MainThread]:   schema: raw
+[0m12:35:19.795586 [info ] [MainThread]:   connect_timeout: 10
+[0m12:35:19.796649 [info ] [MainThread]:   role: None
+[0m12:35:19.797636 [info ] [MainThread]:   search_path: None
+[0m12:35:19.798507 [info ] [MainThread]:   keepalives_idle: 0
+[0m12:35:19.799378 [info ] [MainThread]:   sslmode: None
+[0m12:35:19.800257 [info ] [MainThread]:   sslcert: None
+[0m12:35:19.801150 [info ] [MainThread]:   sslkey: None
+[0m12:35:19.802675 [info ] [MainThread]:   sslrootcert: None
+[0m12:35:19.803799 [info ] [MainThread]:   application_name: dbt
+[0m12:35:19.804678 [info ] [MainThread]:   retries: 1
+[0m12:35:19.805649 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m12:35:19.919367 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m12:35:20.017800 [debug] [MainThread]: Using postgres connection "debug"
+[0m12:35:20.018892 [debug] [MainThread]: On debug: select 1 as id
+[0m12:35:20.019785 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:35:20.059071 [debug] [MainThread]: SQL status: SELECT 1 in 0.039 seconds
+[0m12:35:20.060626 [debug] [MainThread]: On debug: Close
+[0m12:35:20.061474 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:35:20.067984 [info ] [MainThread]: [32mAll checks passed![0m
+[0m12:35:20.069705 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.6611525, "process_in_blocks": "0", "process_kernel_time": 1.628758, "process_mem_max_rss": "116124", "process_out_blocks": "32", "process_user_time": 2.632528}
+[0m12:35:20.070576 [debug] [MainThread]: Command `dbt debug` succeeded at 12:35:20.070477 after 0.66 seconds
+[0m12:35:20.071395 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:35:20.072185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f993b31a8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f993a7cde10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f993abd1950>]}
+[0m12:35:20.073019 [debug] [MainThread]: Flushing usage events
+[0m12:35:20.842105 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:35:22.687336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cd7a7ef90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cd7a75550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cd7ba82d0>]}
+
+
+============================== 12:35:22.692188 | b6fbba10-a321-450d-b996-87c73cc4682a ==============================
+[0m12:35:22.692188 [info ] [MainThread]: Running with dbt=1.10.10
+[0m12:35:22.693728 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'log_format': 'default', 'fail_fast': 'False', 'log_path': '/app/logs', 'profiles_dir': '/app/dbt_integrado2', 'log_cache_events': 'False', 'invocation_command': 'dbt deps', 'empty': 'None', 'no_print': 'None', 'quiet': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'static_parser': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'write_json': 'True', 'version_check': 'True', 'partial_parse': 'True', 'target_path': 'None', 'debug': 'False'}
+[0m12:35:22.831719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b6fbba10-a321-450d-b996-87c73cc4682a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cd782a3d0>]}
+[0m12:35:22.863682 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m12:35:23.700703 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-b19btmug'
+[0m12:35:23.702168 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:35:23.924439 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:35:23.929858 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m12:35:24.048290 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m12:35:24.055666 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m12:35:33.275751 [info ] [MainThread]: Installed from version 1.1.1
+[0m12:35:33.278594 [info ] [MainThread]: Updated version available: 1.3.0
+[0m12:35:33.280532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'b6fbba10-a321-450d-b996-87c73cc4682a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cd8a6cb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cd7828290>]}
+[0m12:35:33.282335 [info ] [MainThread]: 
+[0m12:35:33.284181 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m12:35:33.288860 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 10.702519, "process_in_blocks": "0", "process_kernel_time": 0.834977, "process_mem_max_rss": "106180", "process_out_blocks": "200", "process_user_time": 1.750485}
+[0m12:35:33.291184 [debug] [MainThread]: Command `dbt deps` succeeded at 12:35:33.290718 after 10.71 seconds
+[0m12:35:33.293401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cd7af7b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cdc475690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x789cd7c2a690>]}
+[0m12:35:33.295897 [debug] [MainThread]: Flushing usage events
+[0m12:35:34.050652 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:35:36.315836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b9cb9210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b9d190d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b9d19850>]}
+
+
+============================== 12:35:36.322233 | b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd ==============================
+[0m12:35:36.322233 [info ] [MainThread]: Running with dbt=1.10.10
+[0m12:35:36.324427 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/app/dbt_integrado2', 'empty': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'no_print': 'None', 'fail_fast': 'False', 'quiet': 'False', 'introspect': 'True', 'partial_parse': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'version_check': 'True', 'printer_width': '80', 'invocation_command': 'dbt run', 'write_json': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'log_path': '/app/logs'}
+[0m12:35:36.640064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b93e5390>]}
+[0m12:35:36.732082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676bc8e08d0>]}
+[0m12:35:36.733909 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m12:35:36.860069 [debug] [MainThread]: checksum: 502a0dc23e9052e1ae09f7c44ee219ef7a02dfea7e7d66580d54c304c14d553b, vars: {}, profile: , target: , version: 1.10.10
+[0m12:35:37.112002 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m12:35:37.113473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676bac966d0>]}
+[0m12:35:39.827772 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m12:35:39.828968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b7b48550>]}
+[0m12:35:40.134244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b5f4f050>]}
+[0m12:35:40.240208 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m12:35:40.257836 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m12:35:40.329161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b5eb3f90>]}
+[0m12:35:40.330920 [info ] [MainThread]: Found 9 models, 8 data tests, 5 sources, 549 macros
+[0m12:35:40.332439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b7bfbb90>]}
+[0m12:35:40.336273 [info ] [MainThread]: 
+[0m12:35:40.337429 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:35:40.338409 [info ] [MainThread]: 
+[0m12:35:40.339482 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:35:40.344615 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce'
+[0m12:35:40.501754 [debug] [ThreadPool]: Using postgres connection "list_ecommerce"
+[0m12:35:40.503732 [debug] [ThreadPool]: On list_ecommerce: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "connection_name": "list_ecommerce"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:35:40.504879 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:35:40.542987 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.038 seconds
+[0m12:35:40.545182 [debug] [ThreadPool]: On list_ecommerce: Close
+[0m12:35:40.548917 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ecommerce, now list_ecommerce_raw)
+[0m12:35:40.558135 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_raw"
+[0m12:35:40.559227 [debug] [ThreadPool]: On list_ecommerce_raw: BEGIN
+[0m12:35:40.560097 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:35:40.571601 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m12:35:40.572952 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_raw"
+[0m12:35:40.574261 [debug] [ThreadPool]: On list_ecommerce_raw: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "connection_name": "list_ecommerce_raw"} */
+select
+      'ecommerce' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'ecommerce' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'ecommerce' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+  
+[0m12:35:40.629621 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.054 seconds
+[0m12:35:40.631419 [debug] [ThreadPool]: On list_ecommerce_raw: ROLLBACK
+[0m12:35:40.632325 [debug] [ThreadPool]: On list_ecommerce_raw: Close
+[0m12:35:40.639405 [debug] [MainThread]: Using postgres connection "master"
+[0m12:35:40.640816 [debug] [MainThread]: On master: BEGIN
+[0m12:35:40.641997 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:35:40.649607 [debug] [MainThread]: SQL status: BEGIN in 0.007 seconds
+[0m12:35:40.654496 [debug] [MainThread]: Using postgres connection "master"
+[0m12:35:40.656251 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m12:35:40.685322 [debug] [MainThread]: SQL status: SELECT 0 in 0.027 seconds
+[0m12:35:40.687620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b7fe76d0>]}
+[0m12:35:40.688665 [debug] [MainThread]: On master: ROLLBACK
+[0m12:35:40.690019 [debug] [MainThread]: Using postgres connection "master"
+[0m12:35:40.691220 [debug] [MainThread]: On master: BEGIN
+[0m12:35:40.692957 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m12:35:40.694543 [debug] [MainThread]: On master: COMMIT
+[0m12:35:40.695961 [debug] [MainThread]: Using postgres connection "master"
+[0m12:35:40.697048 [debug] [MainThread]: On master: COMMIT
+[0m12:35:40.698445 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:35:40.699332 [debug] [MainThread]: On master: Close
+[0m12:35:40.721352 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.stg_categories
+[0m12:35:40.723771 [info ] [Thread-1 (]: 1 of 9 START sql view model raw.stg_categories ................................. [RUN]
+[0m12:35:40.725525 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_ecommerce_raw, now model.dbt_integrado2.stg_categories)
+[0m12:35:40.726691 [debug] [Thread-1 (]: Began compiling node model.dbt_integrado2.stg_categories
+[0m12:35:40.736993 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_integrado2.stg_categories"
+[0m12:35:40.747298 [debug] [Thread-1 (]: Began executing node model.dbt_integrado2.stg_categories
+[0m12:35:40.779334 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_integrado2.stg_categories"
+[0m12:35:40.788453 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_categories"
+[0m12:35:40.789730 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_categories: BEGIN
+[0m12:35:40.790697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:35:40.798222 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m12:35:40.799195 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_categories"
+[0m12:35:40.799971 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_categories: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_categories"} */
+
+  create view "ecommerce"."raw"."stg_categories__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "ecommerce"."raw"."categories"
+)
+select
+    category_id,
+    category_name
+from source
+  );
+[0m12:35:40.823270 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.022 seconds
+[0m12:35:40.829210 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_categories"
+[0m12:35:40.830166 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_categories: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_categories"} */
+alter table "ecommerce"."raw"."stg_categories__dbt_tmp" rename to "stg_categories"
+[0m12:35:40.832306 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:35:40.845822 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_categories: COMMIT
+[0m12:35:40.846841 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_categories"
+[0m12:35:40.847665 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_categories: COMMIT
+[0m12:35:40.849744 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m12:35:40.855874 [debug] [Thread-1 (]: Applying DROP to: "ecommerce"."raw"."stg_categories__dbt_backup"
+[0m12:35:40.865944 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_categories"
+[0m12:35:40.868644 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_categories: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_categories"} */
+drop view if exists "ecommerce"."raw"."stg_categories__dbt_backup" cascade
+[0m12:35:40.871689 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m12:35:40.875322 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_categories: Close
+[0m12:35:40.878170 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b522bd50>]}
+[0m12:35:40.879455 [info ] [Thread-1 (]: 1 of 9 OK created sql view model raw.stg_categories ............................ [[32mCREATE VIEW[0m in 0.15s]
+[0m12:35:40.880678 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.stg_categories
+[0m12:35:40.881594 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.stg_customers
+[0m12:35:40.882563 [info ] [Thread-1 (]: 2 of 9 START sql view model raw.stg_customers .................................. [RUN]
+[0m12:35:40.883525 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_integrado2.stg_categories, now model.dbt_integrado2.stg_customers)
+[0m12:35:40.884432 [debug] [Thread-1 (]: Began compiling node model.dbt_integrado2.stg_customers
+[0m12:35:40.887794 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_integrado2.stg_customers"
+[0m12:35:40.896062 [debug] [Thread-1 (]: Began executing node model.dbt_integrado2.stg_customers
+[0m12:35:40.901863 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_integrado2.stg_customers"
+[0m12:35:40.910569 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_customers"
+[0m12:35:40.911501 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_customers: BEGIN
+[0m12:35:40.912263 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:35:40.924553 [debug] [Thread-1 (]: SQL status: BEGIN in 0.012 seconds
+[0m12:35:40.925439 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_customers"
+[0m12:35:40.926163 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_customers: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_customers"} */
+
+  create view "ecommerce"."raw"."stg_customers__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "ecommerce"."raw"."customers"
+)
+select
+    customer_id,
+    customer_name,
+    email,
+    created_at
+from source
+  );
+[0m12:35:40.929986 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m12:35:40.933263 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_customers"
+[0m12:35:40.934451 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_customers: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_customers"} */
+alter table "ecommerce"."raw"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m12:35:40.935637 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m12:35:40.937131 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_customers: COMMIT
+[0m12:35:40.937978 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_customers"
+[0m12:35:40.938618 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_customers: COMMIT
+[0m12:35:40.940522 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m12:35:40.943094 [debug] [Thread-1 (]: Applying DROP to: "ecommerce"."raw"."stg_customers__dbt_backup"
+[0m12:35:40.944046 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_customers"
+[0m12:35:40.944688 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_customers: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_customers"} */
+drop view if exists "ecommerce"."raw"."stg_customers__dbt_backup" cascade
+[0m12:35:40.945675 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m12:35:40.947297 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_customers: Close
+[0m12:35:40.948953 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b8720d90>]}
+[0m12:35:40.950810 [info ] [Thread-1 (]: 2 of 9 OK created sql view model raw.stg_customers ............................. [[32mCREATE VIEW[0m in 0.07s]
+[0m12:35:40.951890 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.stg_customers
+[0m12:35:40.952678 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.stg_order_items
+[0m12:35:40.953723 [info ] [Thread-1 (]: 3 of 9 START sql view model raw.stg_order_items ................................ [RUN]
+[0m12:35:40.954785 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_integrado2.stg_customers, now model.dbt_integrado2.stg_order_items)
+[0m12:35:40.955925 [debug] [Thread-1 (]: Began compiling node model.dbt_integrado2.stg_order_items
+[0m12:35:40.959591 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_integrado2.stg_order_items"
+[0m12:35:40.969907 [debug] [Thread-1 (]: Began executing node model.dbt_integrado2.stg_order_items
+[0m12:35:40.975302 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_integrado2.stg_order_items"
+[0m12:35:40.986309 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_order_items"
+[0m12:35:40.987244 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_order_items: BEGIN
+[0m12:35:40.988305 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:35:40.994771 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m12:35:40.996428 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_order_items"
+[0m12:35:40.997835 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_order_items: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_order_items"} */
+
+  create view "ecommerce"."raw"."stg_order_items__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "ecommerce"."raw"."order_items"
+)
+select
+    order_item_id,
+    order_id,
+    product_id,
+    quantity,
+    item_price
+from source
+  );
+[0m12:35:41.001732 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m12:35:41.005629 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_order_items"
+[0m12:35:41.006674 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_order_items: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_order_items"} */
+alter table "ecommerce"."raw"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m12:35:41.008158 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m12:35:41.010316 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_order_items: COMMIT
+[0m12:35:41.011361 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_order_items"
+[0m12:35:41.012787 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_order_items: COMMIT
+[0m12:35:41.018376 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m12:35:41.031880 [debug] [Thread-1 (]: Applying DROP to: "ecommerce"."raw"."stg_order_items__dbt_backup"
+[0m12:35:41.033701 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_order_items"
+[0m12:35:41.034954 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_order_items: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_order_items"} */
+drop view if exists "ecommerce"."raw"."stg_order_items__dbt_backup" cascade
+[0m12:35:41.036764 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m12:35:41.038801 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_order_items: Close
+[0m12:35:41.040110 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676ba2ca8d0>]}
+[0m12:35:41.041497 [info ] [Thread-1 (]: 3 of 9 OK created sql view model raw.stg_order_items ........................... [[32mCREATE VIEW[0m in 0.09s]
+[0m12:35:41.043254 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.stg_order_items
+[0m12:35:41.044743 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.stg_orders
+[0m12:35:41.046189 [info ] [Thread-1 (]: 4 of 9 START sql view model raw.stg_orders ..................................... [RUN]
+[0m12:35:41.047710 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_integrado2.stg_order_items, now model.dbt_integrado2.stg_orders)
+[0m12:35:41.048891 [debug] [Thread-1 (]: Began compiling node model.dbt_integrado2.stg_orders
+[0m12:35:41.054486 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_integrado2.stg_orders"
+[0m12:35:41.063787 [debug] [Thread-1 (]: Began executing node model.dbt_integrado2.stg_orders
+[0m12:35:41.069456 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_integrado2.stg_orders"
+[0m12:35:41.080682 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_orders"
+[0m12:35:41.082174 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_orders: BEGIN
+[0m12:35:41.083200 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:35:41.090528 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m12:35:41.091883 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_orders"
+[0m12:35:41.092891 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_orders"} */
+
+  create view "ecommerce"."raw"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "ecommerce"."raw"."orders"
+)
+select
+    order_id,
+    customer_id,
+    order_date,
+    status
+from source
+  );
+[0m12:35:41.098895 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.005 seconds
+[0m12:35:41.102865 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_orders"
+[0m12:35:41.103836 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_orders"} */
+alter table "ecommerce"."raw"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m12:35:41.105671 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:35:41.107639 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_orders: COMMIT
+[0m12:35:41.108823 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_orders"
+[0m12:35:41.109809 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_orders: COMMIT
+[0m12:35:41.112686 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m12:35:41.117877 [debug] [Thread-1 (]: Applying DROP to: "ecommerce"."raw"."stg_orders__dbt_backup"
+[0m12:35:41.120275 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_orders"
+[0m12:35:41.121796 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_orders"} */
+drop view if exists "ecommerce"."raw"."stg_orders__dbt_backup" cascade
+[0m12:35:41.123243 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m12:35:41.125131 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_orders: Close
+[0m12:35:41.126528 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676bd23a410>]}
+[0m12:35:41.127887 [info ] [Thread-1 (]: 4 of 9 OK created sql view model raw.stg_orders ................................ [[32mCREATE VIEW[0m in 0.08s]
+[0m12:35:41.129607 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.stg_orders
+[0m12:35:41.131072 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.stg_products
+[0m12:35:41.133296 [info ] [Thread-1 (]: 5 of 9 START sql view model raw.stg_products ................................... [RUN]
+[0m12:35:41.136156 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_integrado2.stg_orders, now model.dbt_integrado2.stg_products)
+[0m12:35:41.138034 [debug] [Thread-1 (]: Began compiling node model.dbt_integrado2.stg_products
+[0m12:35:41.141657 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_integrado2.stg_products"
+[0m12:35:41.151101 [debug] [Thread-1 (]: Began executing node model.dbt_integrado2.stg_products
+[0m12:35:41.156185 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_integrado2.stg_products"
+[0m12:35:41.164396 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_products"
+[0m12:35:41.165454 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_products: BEGIN
+[0m12:35:41.166763 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:35:41.178248 [debug] [Thread-1 (]: SQL status: BEGIN in 0.011 seconds
+[0m12:35:41.179136 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_products"
+[0m12:35:41.179894 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_products: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_products"} */
+
+  create view "ecommerce"."raw"."stg_products__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "ecommerce"."raw"."products"
+)
+select
+    product_id,
+    product_name,
+    category_id,
+    price
+from source
+  );
+[0m12:35:41.184797 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.004 seconds
+[0m12:35:41.188040 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_products"
+[0m12:35:41.188916 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_products: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_products"} */
+alter table "ecommerce"."raw"."stg_products__dbt_tmp" rename to "stg_products"
+[0m12:35:41.190208 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m12:35:41.191925 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_products: COMMIT
+[0m12:35:41.192812 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_products"
+[0m12:35:41.193515 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_products: COMMIT
+[0m12:35:41.195922 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m12:35:41.198822 [debug] [Thread-1 (]: Applying DROP to: "ecommerce"."raw"."stg_products__dbt_backup"
+[0m12:35:41.199949 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.stg_products"
+[0m12:35:41.200783 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_products: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.stg_products"} */
+drop view if exists "ecommerce"."raw"."stg_products__dbt_backup" cascade
+[0m12:35:41.201913 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m12:35:41.203563 [debug] [Thread-1 (]: On model.dbt_integrado2.stg_products: Close
+[0m12:35:41.204685 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b87ed0d0>]}
+[0m12:35:41.205846 [info ] [Thread-1 (]: 5 of 9 OK created sql view model raw.stg_products .............................. [[32mCREATE VIEW[0m in 0.07s]
+[0m12:35:41.206965 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.stg_products
+[0m12:35:41.207914 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.dim_customers
+[0m12:35:41.208978 [info ] [Thread-1 (]: 6 of 9 START sql table model raw.dim_customers ................................. [RUN]
+[0m12:35:41.210860 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_integrado2.stg_products, now model.dbt_integrado2.dim_customers)
+[0m12:35:41.211791 [debug] [Thread-1 (]: Began compiling node model.dbt_integrado2.dim_customers
+[0m12:35:41.235828 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_customers"
+[0m12:35:41.236973 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_customers: BEGIN
+[0m12:35:41.237768 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:35:41.243353 [debug] [Thread-1 (]: SQL status: BEGIN in 0.005 seconds
+[0m12:35:41.244372 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_customers"
+[0m12:35:41.245280 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_customers: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.dim_customers"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "ecommerce".INFORMATION_SCHEMA.columns
+      where table_name = 'stg_customers'
+        
+        and table_schema = 'raw'
+        
+      order by ordinal_position
+
+  
+[0m12:35:41.286985 [debug] [Thread-1 (]: SQL status: SELECT 4 in 0.041 seconds
+[0m12:35:41.291913 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_integrado2.dim_customers"
+[0m12:35:41.301032 [debug] [Thread-1 (]: Began executing node model.dbt_integrado2.dim_customers
+[0m12:35:41.328833 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_integrado2.dim_customers"
+[0m12:35:41.338860 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_customers"
+[0m12:35:41.340708 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_customers: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.dim_customers"} */
+
+  
+    
+
+  create  table "ecommerce"."raw"."dim_customers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+
+  with source as (
+      select * from "ecommerce"."raw"."stg_customers"
+  ),
+  latest as (
+      select
+          *,
+          row_number() over (partition by customer_id order by created_at desc) as rn
+      from source
+  )
+  select
+      customer_id,
+      created_at,
+      customer_name,
+      email,
+      'Y' as current_flag
+  from latest
+  where rn = 1
+
+  );
+  
+[0m12:35:41.353636 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.011 seconds
+[0m12:35:41.373953 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_customers"
+[0m12:35:41.375852 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_customers: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.dim_customers"} */
+alter table "ecommerce"."raw"."dim_customers__dbt_tmp" rename to "dim_customers"
+[0m12:35:41.378067 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:35:41.380283 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_customers: COMMIT
+[0m12:35:41.381363 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_customers"
+[0m12:35:41.382358 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_customers: COMMIT
+[0m12:35:41.385351 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m12:35:41.389525 [debug] [Thread-1 (]: Applying DROP to: "ecommerce"."raw"."dim_customers__dbt_backup"
+[0m12:35:41.393938 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_customers"
+[0m12:35:41.395047 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_customers: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.dim_customers"} */
+drop table if exists "ecommerce"."raw"."dim_customers__dbt_backup" cascade
+[0m12:35:41.396390 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m12:35:41.398588 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_customers: Close
+[0m12:35:41.400477 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b7f96310>]}
+[0m12:35:41.402801 [info ] [Thread-1 (]: 6 of 9 OK created sql table model raw.dim_customers ............................ [[32mSELECT 0[0m in 0.19s]
+[0m12:35:41.404573 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.dim_customers
+[0m12:35:41.405941 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.int_sales
+[0m12:35:41.407455 [info ] [Thread-1 (]: 7 of 9 START sql table model raw.int_sales ..................................... [RUN]
+[0m12:35:41.408786 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_integrado2.dim_customers, now model.dbt_integrado2.int_sales)
+[0m12:35:41.409930 [debug] [Thread-1 (]: Began compiling node model.dbt_integrado2.int_sales
+[0m12:35:41.414933 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_integrado2.int_sales"
+[0m12:35:41.423912 [debug] [Thread-1 (]: Began executing node model.dbt_integrado2.int_sales
+[0m12:35:41.428759 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_integrado2.int_sales"
+[0m12:35:41.439154 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.int_sales"
+[0m12:35:41.440244 [debug] [Thread-1 (]: On model.dbt_integrado2.int_sales: BEGIN
+[0m12:35:41.441153 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:35:41.447960 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m12:35:41.449083 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.int_sales"
+[0m12:35:41.450014 [debug] [Thread-1 (]: On model.dbt_integrado2.int_sales: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.int_sales"} */
+
+  
+    
+
+  create  table "ecommerce"."raw"."int_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with orders as (
+    select * from "ecommerce"."raw"."stg_orders"
+),
+items as (
+    select * from "ecommerce"."raw"."stg_order_items"
+)
+select
+    o.order_id,
+    o.order_date,
+    i.product_id,
+    i.quantity,
+    i.item_price,
+    i.quantity * i.item_price as total_price
+from orders o
+join items i on o.order_id = i.order_id
+  );
+  
+[0m12:35:41.461643 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.010 seconds
+[0m12:35:41.465455 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.int_sales"
+[0m12:35:41.466342 [debug] [Thread-1 (]: On model.dbt_integrado2.int_sales: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.int_sales"} */
+alter table "ecommerce"."raw"."int_sales__dbt_tmp" rename to "int_sales"
+[0m12:35:41.467623 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:35:41.469274 [debug] [Thread-1 (]: On model.dbt_integrado2.int_sales: COMMIT
+[0m12:35:41.470171 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.int_sales"
+[0m12:35:41.470856 [debug] [Thread-1 (]: On model.dbt_integrado2.int_sales: COMMIT
+[0m12:35:41.473154 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m12:35:41.478710 [debug] [Thread-1 (]: Applying DROP to: "ecommerce"."raw"."int_sales__dbt_backup"
+[0m12:35:41.479948 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.int_sales"
+[0m12:35:41.480651 [debug] [Thread-1 (]: On model.dbt_integrado2.int_sales: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.int_sales"} */
+drop table if exists "ecommerce"."raw"."int_sales__dbt_backup" cascade
+[0m12:35:41.481743 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m12:35:41.483225 [debug] [Thread-1 (]: On model.dbt_integrado2.int_sales: Close
+[0m12:35:41.484220 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b5277f50>]}
+[0m12:35:41.485212 [info ] [Thread-1 (]: 7 of 9 OK created sql table model raw.int_sales ................................ [[32mSELECT 0[0m in 0.08s]
+[0m12:35:41.486204 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.int_sales
+[0m12:35:41.486903 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.dim_products
+[0m12:35:41.487690 [info ] [Thread-1 (]: 8 of 9 START sql table model raw.dim_products .................................. [RUN]
+[0m12:35:41.488724 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_integrado2.int_sales, now model.dbt_integrado2.dim_products)
+[0m12:35:41.489494 [debug] [Thread-1 (]: Began compiling node model.dbt_integrado2.dim_products
+[0m12:35:41.494418 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_products"
+[0m12:35:41.495339 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_products: BEGIN
+[0m12:35:41.496050 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:35:41.501338 [debug] [Thread-1 (]: SQL status: BEGIN in 0.005 seconds
+[0m12:35:41.502298 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_products"
+[0m12:35:41.503005 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_products: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.dim_products"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "ecommerce".INFORMATION_SCHEMA.columns
+      where table_name = 'stg_products'
+        
+        and table_schema = 'raw'
+        
+      order by ordinal_position
+
+  
+[0m12:35:41.512461 [debug] [Thread-1 (]: SQL status: SELECT 4 in 0.009 seconds
+[0m12:35:41.515088 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_integrado2.dim_products"
+[0m12:35:41.523353 [debug] [Thread-1 (]: Began executing node model.dbt_integrado2.dim_products
+[0m12:35:41.528255 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_integrado2.dim_products"
+[0m12:35:41.536690 [debug] [Thread-1 (]: Using postgres connection "model.dbt_integrado2.dim_products"
+[0m12:35:41.537943 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_products: /* {"app": "dbt", "dbt_version": "1.10.10", "profile_name": "integrador2", "target_name": "dev", "node_id": "model.dbt_integrado2.dim_products"} */
+
+  
+    
+
+  create  table "ecommerce"."raw"."dim_products__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+  with source as (
+      select * from "ecommerce"."raw"."stg_products"
+  ),
+  latest as (
+      select
+          *,
+          row_number() over (partition by product_id order by created_at desc) as rn
+      from source
+  )
+  select
+      product_id,
+      created_at,
+      product_name,
+      category_id,
+      price,
+      'Y' as current_flag
+  from latest
+  where rn = 1
+
+  );
+  
+[0m12:35:41.539996 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "created_at" does not exist
+LINE 38: ...w_number() over (partition by product_id order by created_at...
+                                                              ^
+
+[0m12:35:41.541159 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_products: ROLLBACK
+[0m12:35:41.542721 [debug] [Thread-1 (]: On model.dbt_integrado2.dim_products: Close
+[0m12:35:41.555809 [debug] [Thread-1 (]: Database Error in model dim_products (dbt_integrado2/models/intermediate/dim_products.sql)
+  column "created_at" does not exist
+  LINE 38: ...w_number() over (partition by product_id order by created_at...
+                                                                ^
+  compiled code at target/run/dbt_integrado2/dbt_integrado2/models/intermediate/dim_products.sql
+[0m12:35:41.556879 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3c7a66b-f420-4898-9b4c-9ccc9d75b4bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b8307750>]}
+[0m12:35:41.558519 [error] [Thread-1 (]: 8 of 9 ERROR creating sql table model raw.dim_products ......................... [[31mERROR[0m in 0.07s]
+[0m12:35:41.560569 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.dim_products
+[0m12:35:41.562504 [debug] [Thread-4 (]: Marking all children of 'model.dbt_integrado2.dim_products' to be skipped because of status 'error'.  Reason: Database Error in model dim_products (dbt_integrado2/models/intermediate/dim_products.sql)
+  column "created_at" does not exist
+  LINE 38: ...w_number() over (partition by product_id order by created_at...
+                                                                ^
+  compiled code at target/run/dbt_integrado2/dbt_integrado2/models/intermediate/dim_products.sql.
+[0m12:35:41.567285 [debug] [Thread-1 (]: Began running node model.dbt_integrado2.fact_sales
+[0m12:35:41.569918 [info ] [Thread-1 (]: 9 of 9 SKIP relation raw.fact_sales ............................................ [[33mSKIP[0m]
+[0m12:35:41.571205 [debug] [Thread-1 (]: Finished running node model.dbt_integrado2.fact_sales
+[0m12:35:41.573753 [debug] [MainThread]: Using postgres connection "master"
+[0m12:35:41.574696 [debug] [MainThread]: On master: BEGIN
+[0m12:35:41.575508 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:35:41.582572 [debug] [MainThread]: SQL status: BEGIN in 0.007 seconds
+[0m12:35:41.583614 [debug] [MainThread]: On master: COMMIT
+[0m12:35:41.584671 [debug] [MainThread]: Using postgres connection "master"
+[0m12:35:41.585483 [debug] [MainThread]: On master: COMMIT
+[0m12:35:41.586652 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:35:41.587429 [debug] [MainThread]: On master: Close
+[0m12:35:41.588379 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:35:41.589114 [debug] [MainThread]: Connection 'model.dbt_integrado2.dim_products' was properly closed.
+[0m12:35:41.590028 [info ] [MainThread]: 
+[0m12:35:41.590892 [info ] [MainThread]: Finished running 4 table models, 5 view models in 0 hours 0 minutes and 1.25 seconds (1.25s).
+[0m12:35:41.592782 [debug] [MainThread]: Command end result
+[0m12:35:41.648690 [debug] [MainThread]: Wrote artifact WritableManifest to /app/target/manifest.json
+[0m12:35:41.655975 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/target/semantic_manifest.json
+[0m12:35:41.667303 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/target/run_results.json
+[0m12:35:41.668982 [info ] [MainThread]: 
+[0m12:35:41.671300 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m12:35:41.672415 [info ] [MainThread]: 
+[0m12:35:41.673382 [error] [MainThread]: [31mFailure in model dim_products (dbt_integrado2/models/intermediate/dim_products.sql)[0m
+[0m12:35:41.674312 [error] [MainThread]:   Database Error in model dim_products (dbt_integrado2/models/intermediate/dim_products.sql)
+  column "created_at" does not exist
+  LINE 38: ...w_number() over (partition by product_id order by created_at...
+                                                                ^
+  compiled code at target/run/dbt_integrado2/dbt_integrado2/models/intermediate/dim_products.sql
+[0m12:35:41.675165 [info ] [MainThread]: 
+[0m12:35:41.676089 [info ] [MainThread]:   compiled code at target/compiled/dbt_integrado2/dbt_integrado2/models/intermediate/dim_products.sql
+[0m12:35:41.677022 [info ] [MainThread]: 
+[0m12:35:41.678531 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=1 SKIP=1 NO-OP=0 TOTAL=9
+[0m12:35:41.679757 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m12:35:41.681493 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 5.464781, "process_in_blocks": "0", "process_kernel_time": 0.64913, "process_mem_max_rss": "130592", "process_out_blocks": "120", "process_user_time": 4.72823}
+[0m12:35:41.682629 [debug] [MainThread]: Command `dbt run` failed at 12:35:41.682496 after 5.47 seconds
+[0m12:35:41.683466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676bac96010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676be541c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7676b52904d0>]}
+[0m12:35:41.684406 [debug] [MainThread]: Flushing usage events
+[0m12:35:42.559830 [debug] [MainThread]: An error was encountered while trying to flush usage events
